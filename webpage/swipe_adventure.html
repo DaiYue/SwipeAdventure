@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Swipe Adventure</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .card {
+            margin: 0;
+            border-radius: 0;
+        }
+        .card .btn {
+            width: 100%;
+        }
+        .progress span {
+            font-weight: bold;
+        }
+    </style>   
+</head>
+<body>
+    <div class="container-fluid p-0 h-100 d-flex flex-column">
+        <!-- ... -->
+        <!-- Progress bars -->
+        <div class="d-flex align-items-center mb-1">
+            <span class="mr-2">Bar 1:</span>
+            <div id="progress1" class="progress flex-grow-1">
+                <div class="progress-bar bg-success" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center mb-1">
+            <span class="mr-2">Bar 2:</span>
+            <div id="progress2" class="progress flex-grow-1">
+                <div class="progress-bar bg-info" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center mb-1">
+            <span class="mr-2">Bar 3:</span>
+            <div id="progress3" class="progress flex-grow-1">
+                <div class="progress-bar bg-warning" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <div class="d-flex align-items-center mb-1">
+            <span class="mr-2">Bar 4:</span>
+            <div id="progress4" class="progress flex-grow-1">
+                <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+            </div>
+        </div>
+        <!-- ... -->
+    
+        <!-- Card -->
+        <div class="card flex-grow-1 d-flex flex-column justify-content-center">
+            <div class="card-body d-flex flex-column justify-content-center">
+                <h5 class="card-title">Card Title</h5>
+                <p class="card-text mb-4">Some description text.</p>
+                <a href="#" class="btn btn-primary mb-2">Choice 1</a>
+                <a href="#" class="btn btn-danger">Choice 2</a>
+            </div>
+        </div>
+        <!-- ... -->
+    </div>   
+</body>
+<script>
+    $(document).ready(function() {
+        // Add event listeners for your choice buttons
+        $('.btn-primary').click(function() {
+            // Update the card title, text, and choices when the first choice is clicked
+            $('.card-title').text('Next Card Title');
+            $('.card-text').text('Next description text.');
+            // ... Update other parts of the card as needed
+        });
+        $('.btn-danger').click(function() {
+            // Update the card title, text, and choices when the second choice is clicked
+            $('.card-title').text('Alternative Next Card Title');
+            $('.card-text').text('Alternative Next description text.');
+            // ... Update other parts of the card as needed
+        });
+    });
+    </script>
+    
+</html>
